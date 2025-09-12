@@ -261,3 +261,50 @@ h3 {
     font-size: 1.1em;
     margin-top: 4rem;
 }
+
+@media (max-width: 768px) {
+    /* Ajustes para o cabeçalho e container */
+    header {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    /* Cartões de suspeitos e pistas */
+    .suspect-card, .clue-card {
+        flex-direction: column; /* Empilha a imagem e o texto */
+        align-items: center;
+        text-align: center;
+    }
+
+    .suspect-card img {
+        margin: 0 0 1rem 0;
+    }
+
+    .clue-card img {
+        margin: 0 0 1rem 0;
+    }
+    
+    /* Linha do tempo */
+    .timeline::before {
+        left: 50%;
+    }
+    
+    .timeline-point {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-content, .timeline li:nth-child(even) .timeline-content {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+    }
+}
