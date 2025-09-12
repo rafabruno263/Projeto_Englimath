@@ -114,3 +114,42 @@ nav a:hover {
 .post-it:nth-child(3) { --rotation: -3deg; top: 10%; left: 65%; }
 .post-it:nth-child(4) { --rotation: 4deg; top: 60%; left: 15%; }
 .post-it:nth-child(5) { --rotation: -6deg; top: 50%; left: 75%; }
+
+@media (max-width: 768px) {
+    /* Ajustes para o cabeçalho em telas menores */
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        letter-spacing: 1px;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        margin: 0 5px;
+    }
+
+    /* O container do quadro não precisa de ajuste de largura */
+    .container.investigation-board {
+        padding-top: 20px;
+        min-height: auto;
+    }
+
+    /* Post-its agora se comportam como blocos normais */
+    .post-it {
+        position: static; /* Remove o posicionamento absoluto */
+        transform: rotate(0deg) !important; /* Remove a rotação */
+        margin: 20px auto; /* Centraliza e adiciona margem entre eles */
+        width: 80%; /* Ocupa 80% da largura da tela */
+        height: 120px;
+    }
+    
+    /* Remove o pino, pois pode ficar estranho em telas menores */
+    .post-it::before {
+        display: none;
+    }
+
+    /* As rotações e posições absolutas são ignoradas */
+}
