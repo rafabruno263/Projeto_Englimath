@@ -1,7 +1,7 @@
 /* Fundo do corpo para parecer um quadro de cortiça */
 body {
     background-color: #8B4513; /* Cor de madeira/cortiça */
-    background-image: url('Imagens/fundo-parede.jpg'); /* Define a imagem de fundo */
+    background-image: url('../../Imagens/fundo-parede.jpg'); /* Define a imagem de fundo */
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -163,7 +163,7 @@ nav a:hover {
     
     /* Efeito de metal prateado */
     background: #c0c0c0; /* Cor de fundo de fallback */
-    background-image: url(Imagens/fundo-quadro.jpg);
+    background-image: url(../../Imagens/fundo-quadro.jpg);
     background-size: 200% 200%;
     
     /* Cria a borda da moldura */
