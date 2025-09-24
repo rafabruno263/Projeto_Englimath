@@ -122,3 +122,78 @@ footer {
     color: #777;
     margin-top: 2rem;
 }
+
+.workshop {
+    width: 100%;
+    margin-bottom: 3rem;
+    box-sizing: border-box; /* Garante que o padding não afete a largura */
+}
+
+/* O contêiner do carrossel */
+div.carousel {
+    position: relative;
+    width: 100% !important; /* FORÇA a largura a ser 100% do seu elemento pai */
+    max-width: 800px !important; /* GARANTE que ele nunca passe de 800px em telas grandes */
+    margin: 0 auto !important; /* FORÇA a centralização horizontal */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Contêiner interno dos slides */
+div.carousel .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Cada slide */
+div.carousel .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+
+/* O slide ativo */
+div.carousel .carousel-item.active {
+    display: block;
+}
+
+div.carousel .carousel-item img {
+    width: 100% !important; 
+    height: auto !important;
+    display: block !important;
+    max-width: 100% !important;
+    vertical-align: middle;
+}
+
+/* Botões de controle (próximo/anterior) */
+div.carousel .carousel-control {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+div.carousel .carousel-control.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+div.carousel .carousel-control.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+div.carousel .carousel-control:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+/* --- Fim do Bloco do Carrossel --- */
